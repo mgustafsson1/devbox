@@ -24,6 +24,18 @@ class nginx::conf {
     source => 'puppet:///modules/nginx/nginx.conf'
   }
 
+
+ file { '/usr/share/nginx/certs':
+    path => '/usr/share/nginx/certs',
+    ensure => directory,
+    owner => root,
+    group => root,
+    purge => true,
+    recurse => true,
+    source => "puppet:///modules/nginx/certs",
+  }
+
+
   file { 'nginx/sites-available':
     path => '/etc/nginx/sites-available',
     ensure => directory,
@@ -33,7 +45,6 @@ class nginx::conf {
     recurse => true,
     source => "puppet:///modules/nginx/sites-available",
   }
-
 
   file { 'var/www':
     path => '/var/www',
