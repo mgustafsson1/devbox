@@ -6,18 +6,18 @@ Vagrant Development Box for running Aboalarm
 
 ## Requirements
 
-* VirtualBox - Free virtualization software [Downloads](https://www.virtualbox.org/wiki/Downloads)
-* Vagrant - Tool for working with virtualbox images [Vagrant Home](https://www.vagrantup.com), click on 'download now link'
-* Git - Source Control Management [Downloads](http://git-scm.com/downloads)
+* [VirtualBox](https://www.virtualbox.org/wiki/Downloads) - Free virtualization software 
+* [Vagrant](https://www.vagrantup.com) - Tool for working with VirtualBox images
+
 
 ## Setup
 
 * Clone this repository `git clone https://github.com/Aboalarm/devbox.git`
 * run `vagrant up` inside the newly created directory
 * (the first time you run vagrant it will need to fetch the virtual box image which is ~300mb so depending on your download speed this could take some time)
-* Vagrant will then use Puppet to provision the  box with the Aboalarm software stack (this could take a few minutes)
+* Vagrant will now use Puppet to provision the box with the Aboalarm software stack (this could take a few minutes)
 * Point aboalarm.dev to 33.33.33.33 in your hosts file of your os. 
-* Finished! You can verify that everything was successful by opening http://aboalarm.dev/stacktest in a browser
+* Done! You can verify that everything was successful by opening http://aboalarm.dev/stacktest in a browser
 
 
 
