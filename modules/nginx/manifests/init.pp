@@ -30,7 +30,10 @@ class nginx::conf {
     owner => root,
     group => root,
     purge => true,
+    recurse => true,
+    source => "puppet:///modules/nginx/sites-available",
   }
+
 
   file { 'var/www':
     path => '/var/www',
@@ -48,13 +51,6 @@ class nginx::conf {
     purge => true,
   }
   
-  file { 'etc/nginx/sites-available/default':
-    path => '/etc/nginx/sites-available/default',
-    ensure => file,
-    owner => root,
-    group => root,
-    source => 'puppet:///modules/nginx/default',
-  }
   file { 'usr/share/nginx/www':
         path => '/usr/share/nginx/www/test.php',
         ensure => file,
