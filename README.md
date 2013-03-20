@@ -15,11 +15,13 @@ Vagrant Development Box for running Aboalarm
 * Clone this repository `git clone https://github.com/Aboalarm/devbox.git`
 * Run `vagrant up` inside the newly created directory. (the first time you run Vagrant it will fetch the virtual box image which is ~300mb. So this could take some time)
 * Vagrant will now use Puppet to provision the box with the Aboalarm software stack (this could take a few minutes)
-* Point aboalarm.dev to `192.168.3.3` in your hosts file of your os. 
+* Point aboalarm.dev to `192.168.3.3` in your hosts file of your OS. 
 * Done! Now just clone the Aboalarm Laravel project into `www/aboalarm.dev` and open http://aboalarm.dev in your browser. The /www folder is automatically shared with your VM's /var/www.
 
+## Shared Folders
+The www folder is automatically synced to the VM (/var/www). This is why we clone our Laravel project into this folder. The sync works in both directions. So any files genereated by Larave (/storage folder for example) will acessible on your HD. 
 
-## Everyday Usage
+## Vagrant Commands
 
 * `vagrant up` starts the virtual machine and provisions it
 * `vagrant suspend` will essentially put the machine to 'sleep' with `vagrant resume` waking it back up
