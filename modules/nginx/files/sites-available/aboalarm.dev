@@ -1,7 +1,7 @@
 server {
     listen          80;
     server_name     aboalarm.dev;
-    root            /var/www/aboalarm.dev/public
+    root            /var/www/aboalarm.dev/public;
 
     location / {
     	index       index.html index.htm index.php;

@@ -8,7 +8,7 @@ class supervisor {
         ensure => file,
         owner => root,
         group => root,
-        source => 'puppet:///supervisor/supervisord.conf',
+        source => 'puppet:///modules/supervisor/supervisord.conf',
         require => Package['supervisor'],
     }
 }
