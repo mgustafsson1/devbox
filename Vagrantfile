@@ -13,7 +13,7 @@ Vagrant::Config.run do |config|
   config.vm.host_name = "devbox"
   config.vm.share_folder("www", "/var/www", "./www", :extra => 'dmode=777,fmode=777')
   # Set the Timezone to something useful
-  #config.vm.provision :shell, :inline => "echo \"Europe/Berlin\" | sudo tee /etc/timezone && dpkg-reconfigure --frontend noninteractive tzdata"
+  config.vm.provision :shell, :inline => "echo \"Europe/Berlin\" | sudo tee /etc/timezone && dpkg-reconfigure --frontend noninteractive tzdata"
 
   # Assign this VM to a host-only network IP, allowing you to access it
   # via the IP. Host-only networks can talk to the host machine as well as
