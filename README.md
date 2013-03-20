@@ -12,7 +12,7 @@ Vagrant Development Box for running Aboalarm
 
 ## Initial Setup
 
-* Clone this repository `git clone https://github.com/Aboalarm/devbox.git` to place you want to work from. 
+* Clone this repository `git clone https://github.com/Aboalarm/devbox.git` to a place you want to work from. 
 * Run `vagrant up` inside the newly created directory. (the first time you run Vagrant it will fetch the virtual box image which is ~300mb. So this could take some time)
 * Vagrant will now use Puppet to provision the box with the Aboalarm software stack (this could take a few minutes)
 * Point aboalarm.dev to `192.168.3.3` in your hosts file of your OS. 
