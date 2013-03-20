@@ -1,14 +1,34 @@
-class mysql {
-  $password = "My$QLp455"
-  package { "mysql-client": ensure => installed }
-  package { "mysql-server": ensure => installed }
-  package { "libmysqlclient-dev": ensure => installed }
+class mysql 
+{
+    $mysqlPassword = "root"
+ 
+    package 
+    { 
+        "mysql-server":
+            ensure  => present,
+            require => Exec['apt-get update']
+    }
 
-  exec { "Set MySQL server root password":
-    subscribe => [ Package["mysql-server"], Package["mysql-client"], Package["libmysqlclient-dev"] ],
-    refreshonly => true,
-    unless => "mysqladmin -uroot -p$password status",
-    path => "/bin:/usr/bin",
-    command => "mysqladmin -uroot password $password",
-  }
+    package
+    {
+      "mysql-client":
+        ensure  => present
+    }
+
+    service 
+    { 
+        "mysql":
+            enable => true,
+            ensure => running,
+            require => Package["mysql-server"],
+    }
+
+    exec 
+    { 
+        "set-mysql-password":
+            unless  => "mysqladmin -uroot -p$mysqlPassword status",
+            command => "mysqladmin -uroot password $mysqlPassword",
+            path    => "/bin:/usr/bin",
+            require => Service["mysql"],
+    }
 }
