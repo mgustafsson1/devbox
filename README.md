@@ -21,6 +21,10 @@ Vagrant Development Box for running Aboalarm
 ## Shared Folders
 The www folder is automatically synced to the VM (/var/www). This is why we clone our Laravel project into this folder. The sync works in both directions. So any files genereated by Larave (/storage folder for example) will acessible on your HD. 
 
+## VM Credentials 
+* SSH User: vagrant PW: vagrant
+* MySQL User: root PW: root (access MySQL through SSH)
+
 ## Vagrant Commands
 
 * `vagrant up` starts the virtual machine and provisions it
