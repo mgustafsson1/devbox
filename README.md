@@ -28,10 +28,13 @@ The www folder is automatically synced to the VM (/var/www). This is why we clon
 ## Vagrant Commands
 
 * `vagrant up` starts the virtual machine and provisions it
+* `vagrant ssh` gives you shell access to the virtual machine
 * `vagrant suspend` will essentially put the machine to 'sleep' with `vagrant resume` waking it back up
 * `vagrant reload` will reload the VM. Do this when the VM config changed. For exmpale when you changed one of the configs (e.g. php.ini, sphinx.conf, etc. or after a git pull of this repo)
 * `vagrant halt` attempts a graceful shutdown of the machine and will need to be brought back with `vagrant up`
-* `vagrant ssh` gives you shell access to the virtual machine
+* `vagrant halt --force` force shutdown if normal halt doesn't work
+* `vagrant destroy` you broke something? this will destroy the VM and reprovisions it again completely. Takes some time.
+
 
 
 Fore more: Vagrant is [very well documented](http://docs.vagrantup.com/v2/)
