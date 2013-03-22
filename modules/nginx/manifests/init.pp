@@ -53,22 +53,6 @@ class nginx::conf {
     group => root,
   }
 
-  file { 'var/www/nginx-default':
-    path => '/var/www/nginx-default',
-    ensure => directory,
-    require => File['var/www'],
-    owner => root,
-    group => root,
-    purge => true,
-  }
-  
-  file { 'usr/share/nginx/www':
-        path => '/usr/share/nginx/www/test.php',
-        ensure => file,
-        owner => root,
-        group => root,
-        source => 'puppet:///modules/nginx/test.php',
-    }
 
 }
 
