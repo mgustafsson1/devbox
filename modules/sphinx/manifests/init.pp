@@ -16,11 +16,17 @@ class sphinx {
 
 
     # Create the Directory where Sphinx places the .spl files
-    file { "/var/db/sphinxsearch/data/myl":
-        ensure => "directory",
-        owner  => "root",
-        group  => "root",
+    file { '/var/db/sphinxsearch/data/myl':
+        ensure => directory,
+        owner  => root,
+        group  => root,
         mode   => 750,
+    }
+
+
+    # Run the indexer
+    exec { 'set-mysql-password':
+        command => "indexer --all",
     }
 
 
