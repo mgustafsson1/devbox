@@ -20,15 +20,7 @@ class sphinx {
         ensure => directory,
         owner  => root,
         group  => root,
-        mode   => 750,
+        mode   => 755,
     }
-
-
-    # Run the indexer
-    exec { 'run-sphinx-indexer':
-        command => "indexer --all",
-    }
-
-
 }
 
