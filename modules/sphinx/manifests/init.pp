@@ -4,6 +4,7 @@ class sphinx {
         ensure => installed,
     }
 
+    # Replace the default sphinx.conf
     file { 'sphinx.conf':
         path => '/etc/sphinxsearch/sphinx.conf',
         ensure => file,
@@ -12,5 +13,16 @@ class sphinx {
         source => 'puppet:///modules/sphinx/sphinx.conf',
         require => Package['sphinxsearch'],
     }
+
+
+    # Create the Directory where Sphinx places the .spl files
+    file { "/var/db/sphinxsearch/data/myl":
+        ensure => "directory",
+        owner  => "root",
+        group  => "root",
+        mode   => 750,
+    }
+
+
 }
 
