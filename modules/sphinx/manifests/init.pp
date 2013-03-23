@@ -25,7 +25,7 @@ class sphinx {
 
 
     # Run the indexer
-    exec { 'set-mysql-password':
+    exec { 'run-sphinx-indexer':
         command => "indexer --all",
     }
 
