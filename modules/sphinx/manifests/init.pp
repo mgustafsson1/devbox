@@ -16,7 +16,7 @@ class sphinx {
 
 
     # Create the Directory where Sphinx places the .spl files
-    file { '/var/db/sphinxsearch/data/myl':
+    file { ['/var/db', '/var/db/sphinxsearch', '/var/db/sphinxsearch/data', '/var/db/sphinxsearch/data/myl']:
         ensure => directory,
         owner  => root,
         group  => root,
