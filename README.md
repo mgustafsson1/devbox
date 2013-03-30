@@ -1,7 +1,7 @@
 devbox
 ======
 
-A vagrant development vm provisioned for working with PHP and the [Laravel](http://www.laravel.com) framework out of the box. 
+devbox is a Vagrant development machine provisioned and preconfigured for working with PHP and the [Laravel](http://www.laravel.com) framework out of the box. 
 
 
 ## Features / Stack
@@ -42,4 +42,6 @@ The www folder is automatically synced to the VM (/var/www). This is why we clon
 
 
 
-Fore more: Vagrant is [very well documented](http://docs.vagrantup.com/v2/)
+For more: Vagrant is [very well documented](http://docs.vagrantup.com/v2/)
+
+Please fork, improve, extend, make pull request, wrap it as a gift. Use the GitHub Issues!
