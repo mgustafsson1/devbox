@@ -5,7 +5,7 @@ devbox is a Vagrant development machine provisioned and preconfigured for workin
 
 
 ## Features / Stack
-Ubuntu 12.04 32bit, Nginx, PHP5.4, php-fpm, MySQL 5.5, Redis, Beanstalkd, supervisord, Sphinx, localtunnel, Node.js, MongoDB
+Ubuntu 12.04 32bit, Nginx, PHP5.4, php-fpm, xdebug, MySQL 5.5, Redis, Beanstalkd, supervisord, Sphinx, localtunnel, Node.js, MongoDB
 
 
 
