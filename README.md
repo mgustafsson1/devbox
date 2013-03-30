@@ -1,7 +1,13 @@
-Aboalarm devbox
+devbox
 ======
 
-Vagrant Development Box for running Aboalarm
+A vagrant development box configured for working with PHP and the Laravel framework. 
+
+
+##### Features #####
+
+* OS: Ubuntu 12.04 (precise32 box), Nginx, PHP 5.4, MySQL 5.5, Redis, Beanstalkd, supervisord, Sphinx, localtunnel, Node.js, MongoDB
+
 
 
 ## Requirements
@@ -38,19 +44,3 @@ The www folder is automatically synced to the VM (/var/www). This is why we clon
 
 
 Fore more: Vagrant is [very well documented](http://docs.vagrantup.com/v2/)
-
-
-
-##### Virtual Machine Specifications #####
-
-* OS: Ubuntu 12.04 (precise32 box)
-* Nginx       
-* PHP 5.4
-* MySQL 5.5
-* Redis
-* Beanstalkd
-* supervisord
-* Sphinx
-* localtunnel
-* Node.js
-* MongoDB
