@@ -1,7 +1,7 @@
 devbox
 ======
 
-A vagrant development vm provisioned for working with PHP and the Laravel framework out of the box. 
+A vagrant development vm provisioned for working with PHP and the [Laravel](http://www.laravel.com) framework out of the box. 
 
 
 ## Features / Stack
