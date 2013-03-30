@@ -1,6 +1,3 @@
-This folder is the web root of the VM.
-So simply put your web projects here. (Clone them with git)
-
-Host setups
-The webserver nginx is configured that it automatically maps your host to any folder inside this directory with the same name using the Laravel config. 
+This folder is the web root of the VM. It maps to /var/www using the shared folders of vagrant / virtualbox.
+Nginx is configured that it automatically maps your host to any folder inside this directory with the same name. 
 So http://devbox will map to devbox/public, http://myproject.dev will map to myproject.dev/public
